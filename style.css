@@ -364,8 +364,8 @@ footer p { color: var(--text-muted); font-size: 0.875rem; }
   .initials { font-size: 3rem; }
   .floating-card { font-size: 0.72rem; padding: 8px 10px; white-space: nowrap; }
   .hero-visual { width: 100%; max-width: 340px; overflow: visible; }
-  .card1 { left: 5px; top: 2%; transform: none; }
-  .card2 { left: 5px; bottom: 2%; transform: none; }
-  .card3 { right: 5px; left: auto; top: 2%; transform: none; }
+  .card1 { left: 5px; top: 5%; transform: none; }
+  .card2 { left: 5px; bottom: 5%; transform: none; }
+  .card3 { right: 5px; left: auto; bottom: 5%; transform: none; }
   .timeline-header { flex-direction: column; }
 }

@@ -144,7 +144,7 @@ body {
   font-size: 0.82rem; font-weight: 600;
   display: flex; align-items: center; gap: 8px;
   animation: float 3s ease-in-out infinite;
-  white-space: nowrap;
+  white-space: nowrap; z-index: 3;
 }
 .floating-card i { color: var(--primary); }
 .card1 { top: 10%; left: -20%; animation-delay: 0s; }
@@ -364,8 +364,8 @@ footer p { color: var(--text-muted); font-size: 0.875rem; }
   .initials { font-size: 3rem; }
   .floating-card { font-size: 0.72rem; padding: 8px 10px; white-space: nowrap; }
   .hero-visual { width: 100%; max-width: 340px; overflow: visible; }
-  .card1 { left: 5px; top: 5%; }
-  .card2 { left: 5px; bottom: 5%; }
-  .card3 { right: 5px; left: auto; top: 38%; transform: none; }
+  .card1 { left: 5px; top: 2%; transform: none; }
+  .card2 { left: 5px; bottom: 2%; transform: none; }
+  .card3 { right: 5px; left: auto; top: 2%; transform: none; }
   .timeline-header { flex-direction: column; }
 }

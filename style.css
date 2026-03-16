@@ -296,7 +296,7 @@ section:nth-child(even) { background: var(--dark2); }
 }
 
 /* ===== CONTACT ===== */
-.contact-grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: 48px; align-items: start; }
+.contact-grid { display: grid; grid-template-columns: 1fr 1.6fr; gap: 48px; align-items: start; }
 .contact-info p { color: var(--text-muted); margin-bottom: 28px; font-size: 1rem; }
 .contact-items { display: flex; flex-direction: column; gap: 16px; }
 .contact-item {
@@ -317,6 +317,7 @@ section:nth-child(even) { background: var(--dark2); }
 }
 .contact-form textarea {
   min-height: 160px;
+  width: 100%;
   resize: vertical;
 }
 .contact-form input:focus, .contact-form textarea:focus {

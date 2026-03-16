@@ -362,9 +362,9 @@ footer p { color: var(--text-muted); font-size: 0.875rem; }
   .hero-visual { width: 280px; }
   .hero-circle { width: 180px; height: 180px; }
   .initials { font-size: 3rem; }
-  .floating-card { font-size: 0.72rem; padding: 8px 12px; }
-  .card1 { left: -8%; top: 5%; }
-  .card2 { left: -8%; bottom: 5%; }
-  .card3 { right: -8%; top: 35%; }
+  .floating-card { font-size: 0.72rem; padding: 8px 10px; white-space: nowrap; }
+  .card1 { left: 50%; transform: translateX(-130%); top: 2%; }
+  .card2 { left: 50%; transform: translateX(-130%); bottom: 2%; }
+  .card3 { left: 50%; transform: translateX(30%); top: 38%; }
   .timeline-header { flex-direction: column; }
 }

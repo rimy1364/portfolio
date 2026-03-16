@@ -315,11 +315,18 @@ section:nth-child(even) { background: var(--dark2); }
   color: var(--text); font-family: 'Inter', sans-serif; font-size: 0.95rem;
   outline: none; transition: border-color 0.3s; resize: vertical;
 }
+.contact-form textarea {
+  min-height: 160px;
+  resize: vertical;
+}
 .contact-form input:focus, .contact-form textarea:focus {
   border-color: var(--primary);
 }
 .contact-form input::placeholder, .contact-form textarea::placeholder {
   color: var(--text-muted);
+}
+.contact-form button {
+  margin-top: 8px;
 }
 
 /* ===== FOOTER ===== */

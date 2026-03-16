@@ -40,17 +40,43 @@ animatedEls.forEach(el => {
   observer.observe(el);
 });
 
-// Contact form
-document.getElementById('contactForm').addEventListener('submit', (e) => {
+// Contact form - Formspree
+document.getElementById('contactForm').addEventListener('submit', async (e) => {
   e.preventDefault();
-  const btn = e.target.querySelector('button');
-  btn.textContent = '✅ Message Sent!';
-  btn.style.background = 'linear-gradient(135deg, #43e97b, #38f9d7)';
-  setTimeout(() => {
-    btn.innerHTML = 'Send Message <i class="fas fa-paper-plane"></i>';
-    btn.style.background = '';
-    e.target.reset();
-  }, 3000);
+  const form = e.target;
+  const btn = form.querySelector('button');
+
+  btn.textContent = 'Sending...';
+  btn.disabled = true;
+
+  try {
+    const response = await fetch(form.action, {
+      method: 'POST',
+      body: new FormData(form),
+      headers: { 'Accept': 'application/json' }
+    });
+
+    if (response.ok) {
+      btn.innerHTML = '✅ Message Sent!';
+      btn.style.background = 'linear-gradient(135deg, #43e97b, #38f9d7)';
+      form.reset();
+      setTimeout(() => {
+        btn.innerHTML = 'Send Message <i class="fas fa-paper-plane"></i>';
+        btn.style.background = '';
+        btn.disabled = false;
+      }, 4000);
+    } else {
+      throw new Error('Failed');
+    }
+  } catch {
+    btn.innerHTML = '❌ Failed. Try again.';
+    btn.style.background = 'linear-gradient(135deg, #ff6584, #ff4757)';
+    btn.disabled = false;
+    setTimeout(() => {
+      btn.innerHTML = 'Send Message <i class="fas fa-paper-plane"></i>';
+      btn.style.background = '';
+    }, 3000);
+  }
 });
 
 // Active nav link highlighting
